@@ -4,8 +4,12 @@ export default function Main () {
     return(
         <Wrap>
             <div className="bp-container">
-                    {/* <img className="progressionbar"></img> */}
-                    <h5>Blabla</h5>
+                    <div className="bp-container-title">
+                        <div className="progression-bar-red">
+                            <div className="already-done-red"></div>
+                        </div>
+                        <h5>In backlog</h5>
+                    </div>
             </div>
         </Wrap>
     )
