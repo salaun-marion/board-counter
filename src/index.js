@@ -12,6 +12,6 @@ const root = createRoot(container);
 root.render(
     <div>
         <Header/>
-        <Main />
+        <Main/>
     </div>
 )
