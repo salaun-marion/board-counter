@@ -6,20 +6,21 @@
 }
 
 .title{
-    font-weight:400;
     font-size: 1rem;
-
-    color: #FFFFFF;
 
     display: block;
     text-align: center;
-    padding: 4rem;
+    padding: 2rem;
 }
 
+.community-title{
+    font-weight:600;
+    color: #FFFFFF;
+}
 .color-title{
+    font-weight: 600;
     color: #D40101; 
 }
-
 .wrap{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -34,9 +35,9 @@
     align-items: center;    
 
     border: 1px solid #282828;
-    border-radius: 5px;
+    border-radius: 10px;
 
-    padding:2rem;
+    padding:1.5rem;
 }
 
 .bp-container h5{
@@ -49,6 +50,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding-bottom: 1rem;
 }
 
@@ -69,7 +71,7 @@
 .tiny-container {
     background-color: #1F1F1F;
 
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 1rem ;
 
     height: 100%;
@@ -86,22 +88,21 @@
     
 }
 
-.tiny-container h5{
+.tiny-title{
     background-color: #1F1F1F;
     padding-right: 10px; 
 }
 
-.tiny-container h4{
+.tiny-PRO{
     background-color: #2E2E2E;
     color:#FFFFFF;
 
     font-size: 7px;
     font-weight: 400;
 
-    border-radius: 5px;
+    border-radius: 2px;
 
-    padding: 3px;
-    
+    padding: 2.5px 5px;
 }
 
 button{
@@ -123,7 +124,7 @@ button{
     background-color: #1F1F1F;
     color :#B8B8B8;
 
-    padding: 0.2rem;
+    padding-top: 1rem;
     
 }
 
