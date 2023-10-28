@@ -128,31 +128,59 @@
     
 }
 
-.register-panel{
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;  
-
-    padding: 1rem 1.5rem;
+.register-panel{ 
+    padding: 0.5rem 0.3rem;    
+    border-radius: 10px;
 
     width :15rem;
-    height: 6em;
+    height: 6.5em;
 
+    background-color: black;
+    font-family: 'Inter';
+
+}
+
+.register-title{ 
+    display:flex;
+    flex-direction: row;
+    align-items: center;  
+    justify-content: flex-end;
+
+    padding-bottom: 1rem;
+
+    background-color: black;
+}
+
+.close-icon{
+    width:20px;
+    height:20px;
+
+    color: white;
     background-color: black;
 
     font-family: 'Inter';
-    border-radius: 10px;
+    font-weight: 100;
+
+    border:none;
 }
 
 .label-email{
     color:white;
     background-color: black;
-    
-    padding-bottom: 1rem;
 
-    font-weight: 600;
+    font-weight: 400;
     font-size:12px;
+
+    padding-right: 4rem;
+}
+
+.form{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;  
+
+    background-color: black;
 }
 
 input[type=email]{
@@ -165,21 +193,22 @@ input[type=email]{
 
     border-radius: 2px;
 
-    width : 110%;
-    height : 300%;
+    width:95%;
+    height: 25px;
 }
 
 .upvote{
     background-color: #2894DF;
     color:white;
 
-    font-weight: 700;
+    font-weight: 500;
     font-size: 9px;
 
     border: none;
-
-    width : 110%;
-    height : 300%;
     border-radius: 2px;
-    margin-top :10px;
+    margin-top :12px;
+
+    width:95%;
+    height: 25px;
+    
 }
