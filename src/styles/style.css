@@ -112,7 +112,8 @@
     background-color: #1F1F1F;
     color: white;
 
-    font-size: 10px;
+    font-size: 7px;
+    font-weight:500;
     text-align: center; 
 
     border: 1px solid #3C3C3C;
@@ -129,6 +130,10 @@
 }
 
 .register-panel{ 
+    position: absolute;
+    top: 40%;
+    left: 40%;
+
     padding: 0.5rem 0.3rem;    
     border-radius: 10px;
 
@@ -211,4 +216,30 @@ input[type=email]{
     width:95%;
     height: 25px;
     
+}
+
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    padding: 10px 20px;
+    display: block;
+    margin: 100px auto 0;
+    font-size: 18px;
+}
+
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(123, 125, 123, 0.20);
 }

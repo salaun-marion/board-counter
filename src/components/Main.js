@@ -1,10 +1,24 @@
+import React, { useState } from "react";
 import Tinypanel from "./Tinypanel";
-
-const Wrap = ({ children }) => <div className="wrap">{children}</div>
+import Register from "./modal/Register";
 
 export default function Main () {
-    return(
-        <Wrap>
+
+    const[modal, setModal] = useState(false);
+
+    const toggleModal = () => {
+        setModal(!modal)
+    }
+
+    const close = (e) => {
+        if(e.key === 'Escape'){
+        toggleModal()
+        }
+    }
+    window.addEventListener('keydown', close)
+   
+    return (
+        <div className="wrap">
             <div className="bp-container">
                     <div className="bp-container-title">
                         <div className="progression-bar-red">
@@ -13,9 +27,17 @@ export default function Main () {
                         <h5>In backlog</h5>
                         
                     </div>
-                    <Tinypanel/>
+                    <Tinypanel onClick={toggleModal}/>
             </div>
-        </Wrap>
+            {modal && (
+                <div className="modal">
+                    <div className= "overlay" onClick={toggleModal}>
+                       <Register onClick={toggleModal}/>
+                    </div> 
+                    
+                </div>
+            )}
+        </div>
     )
 } 
     
