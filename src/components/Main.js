@@ -32,9 +32,8 @@ export default function Main () {
             {modal && (
                 <div className="modal">
                     <div className= "overlay" onClick={toggleModal}>
-                       <Register onClick={toggleModal}/>
                     </div> 
-                    
+                    <Register onClick={toggleModal}/> 
                 </div>
             )}
         </div>

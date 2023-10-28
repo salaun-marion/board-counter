@@ -25,10 +25,12 @@ export default function Register(props) {
                     </svg>
                 </button>
             </span>
-            <span className="form">
-                <input type="email" id="email" placeholder="Email address" size="30" required />
-                <button className="upvote" onClick={props.onClick}>Upvote</button>
-            </span>
+            <form>
+                <span className="form">
+                    <input type="email" id="email" placeholder="Email address" size="30" required />
+                    <input type="submit" className="upvote" value="Upvote" />
+                </span>
+            </form>
         </div>
     )
 }
