@@ -1,13 +1,13 @@
+export default function Tinypanel({title,description,pro_off_on,submitted, count}){
 
-export default function Tinypanel({onCheck,counter}){
     return(
         <div className = "tiny-container">
             <span className="tiny-container-title">
-                <button className="counter" type="button" id="counter" onClick={onCheck} > {counter} </button>
-                <h5 className="tiny-title">Custom Fields</h5>
-                <h4 className="tiny-PRO">PRO</h4>
+                <button className="counter" type="button" id="counter" onClick={submitted} > {count} </button>
+                <h5 className="tiny-title">{title}</h5>
+                <h4 className={`tiny-pro-${pro_off_on}`}>PRO</h4>
             </span>
-            <p> Add custom fields to your passwords.</p>     
+            <p>{description}</p>     
         </div>       
     )
 }

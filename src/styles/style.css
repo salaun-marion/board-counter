@@ -25,7 +25,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-    padding:2rem;
+    padding:4rem;
 }
 
 .bp-container{
@@ -73,6 +73,7 @@
 
     border-radius: 10px;
     padding: 1rem ;
+    margin:0.5rem;
 
     height: 100%;
     width: 100%;
@@ -85,7 +86,6 @@
     align-items: center;  
 
     background-color: #1F1F1F;
-    
 }
 
 .tiny-title{
@@ -93,7 +93,7 @@
     padding-right: 10px; 
 }
 
-.tiny-PRO{
+.tiny-pro-on{
     background-color: #2E2E2E;
     color:#FFFFFF;
 
@@ -103,6 +103,10 @@
     border-radius: 2px;
 
     padding: 2.5px 5px;
+}
+
+.tiny-pro-off{
+    display:none;
 }
 
 .counter{

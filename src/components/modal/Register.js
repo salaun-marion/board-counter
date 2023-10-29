@@ -1,8 +1,8 @@
-export default function Register({onVote, onClose}) {
+export default function Register({id, onVote, onClose}) {
 
     const handleClick = (e) => {
         e.preventDefault()
-        onVote()
+        onVote(id)
         onClose()
     }
     

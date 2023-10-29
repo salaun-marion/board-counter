@@ -1,11 +1,27 @@
 import { useState } from "react";
 import Tinypanel from "./Tinypanel";
+import BackPanel from "./Backpanel";
 import Register from "./modal/Register";
+import {v4 as uuidv4} from 'uuid';
 
 export default function Main () {
 
     const[modal, setModal] = useState(false)
     const[count, setCount] = useState(0)
+    const[tinypanels, setTinyPanel] = useState([
+        {
+            title:"Custom Fields",
+            description:"Add custom fields to your passwords.",
+            pro_off_on:"on",
+            counter:0
+        },
+        {
+            title:"Secure files & notes",
+            description:"Store other secrets than a password such as notes.",
+            pro_off_on:"off",
+            counter:0
+        }
+    ]);
 
     const toggleModal = () => {
         setModal(!modal) 
@@ -31,18 +47,24 @@ export default function Main () {
    
     return (
         <div className="wrap">
-            <div className="bp-container">
-                    <div className="bp-container-title">
-                        <div className="progression-bar-red">
-                            <div className="already-done-red"></div>
-                        </div>
-                        <h5>In backlog</h5>
-                    </div>
-                    <Tinypanel 
-                        onCheck={checkSubmission}
-                        counter={count}
-                    />
-            </div>
+            <BackPanel
+                title = "In Backlog"
+                color="red"
+                card = {
+                    tinypanels.map((tinypanel)=> {
+                        return(
+                            <Tinypanel 
+                                key={uuidv4()}
+                                title={tinypanel.title}
+                                description={tinypanel.description}
+                                pro_off_on={tinypanel.pro_off_on}
+                                count={tinypanel.counter}
+                                submitted={checkSubmission}
+                            />
+                        )
+                    })
+                }
+            />
             {modal && (
                 <div className="modal">
                     <div className= "overlay" onClick={toggleModal}>
@@ -56,5 +78,5 @@ export default function Main () {
         </div>
     )
 } 
-    
+
 
