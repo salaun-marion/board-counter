@@ -31,7 +31,7 @@
 .bp-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;    
 
     border: 1px solid #282828;
@@ -68,7 +68,30 @@
     border-radius: 1px;
 }
 
+.progression-bar-yellow{
+    background-color :#433522;
+    height: 3px;
+    width: 13px;
+    border-radius: 1px;
+}
+
+.already-done-yellow{
+    background-color: #F2AE54;
+    height:3px;
+    width:6px;
+    border-radius: 1px;
+}
+
+.already-done-green{
+    background-color: #068869 ;
+    height:3px;
+    width:13px;
+    border-radius: 1px;
+}
+
+
 .tiny-container {
+
     background-color: #1F1F1F;
 
     border-radius: 10px;
@@ -76,6 +99,7 @@
     margin:0.5rem;
 
     height: 100%;
+    max-height: 70px;
     width: 100%;
 }
 
