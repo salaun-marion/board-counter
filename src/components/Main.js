@@ -1,21 +1,33 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Tinypanel from "./Tinypanel";
 import Register from "./modal/Register";
 
 export default function Main () {
 
-    const[modal, setModal] = useState(false);
+    const[modal, setModal] = useState(false)
+    const[count, setCount] = useState(0)
 
     const toggleModal = () => {
-        setModal(!modal)
+        setModal(!modal) 
     }
 
-    const close = (e) => {
-        if(e.key === 'Escape'){
-        toggleModal()
-        }
+    const increment = () => {
+        setCount(count+1)
     }
-    window.addEventListener('keydown', close)
+
+    const checkSubmission = () => {
+        if (count > 0){
+            increment()
+        }else{
+            toggleModal()
+        }
+    } 
+
+    window.addEventListener('keydown',((e) => {
+        if(e.key === 'Escape'){
+            toggleModal()
+        }
+    }))
    
     return (
         <div className="wrap">
@@ -25,15 +37,20 @@ export default function Main () {
                             <div className="already-done-red"></div>
                         </div>
                         <h5>In backlog</h5>
-                        
                     </div>
-                    <Tinypanel onClick={toggleModal}/>
+                    <Tinypanel 
+                        onCheck={checkSubmission}
+                        counter={count}
+                    />
             </div>
             {modal && (
                 <div className="modal">
                     <div className= "overlay" onClick={toggleModal}>
                     </div> 
-                    <Register onClick={toggleModal}/> 
+                    <Register 
+                        onClose={toggleModal}
+                        onVote={increment}
+                    /> 
                 </div>
             )}
         </div>

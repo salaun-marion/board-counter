@@ -1,11 +1,16 @@
+export default function Register({onVote, onClose}) {
 
-export default function Register(props) {
-  
+    const handleClick = (e) => {
+        e.preventDefault()
+        onVote()
+        onClose()
+    }
+    
     return (
         <div className="register-panel">
             <span className="register-title">
                 <label className="label-email" htmlFor="email">Enter your email</label>
-                <button className="close-icon" onClick={props.onClick}>
+                <button className="close-icon" onClick={onClose}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="12"
@@ -25,7 +30,7 @@ export default function Register(props) {
                     </svg>
                 </button>
             </span>
-            <form>
+            <form onSubmit={handleClick} >
                 <span className="form">
                     <input type="email" id="email" placeholder="Email address" size="30" required />
                     <input type="submit" className="upvote" value="Upvote" />

@@ -1,9 +1,9 @@
 
-export default function Tinypanel(props){
+export default function Tinypanel({onCheck,counter}){
     return(
         <div className = "tiny-container">
             <span className="tiny-container-title">
-                <button className="counter" type="button" id="counter" onClick={props.onClick} > 1 </button>
+                <button className="counter" type="button" id="counter" onClick={onCheck} > {counter} </button>
                 <h5 className="tiny-title">Custom Fields</h5>
                 <h4 className="tiny-PRO">PRO</h4>
             </span>
