@@ -9,6 +9,7 @@
     font-size: 1rem;
 
     display: block;
+    justify-content: center;
     text-align: center;
     padding: 2rem;
 }
@@ -25,7 +26,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-    padding:4rem;
+    padding:1rem 10rem;
 }
 
 .bp-container{
@@ -37,7 +38,7 @@
     border: 1px solid #282828;
     border-radius: 10px;
 
-    padding:1.5rem;
+    padding:1rem;
 }
 
 .bp-container h5{
@@ -89,6 +90,14 @@
     border-radius: 1px;
 }
 
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;   
+
+    width: 100%;
+}
 
 .tiny-container {
 
@@ -96,11 +105,11 @@
 
     border-radius: 10px;
     padding: 1rem ;
-    margin:0.5rem;
+    margin:0.4rem;
 
-    height: 100%;
+    height: 80%;
     max-height: 70px;
-    width: 100%;
+    width:80%;
 }
 
 .tiny-container-title{
