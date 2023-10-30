@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Register from "./modal/Register";
 
 export default function Tinypanel({title,description,logo}){
@@ -21,6 +21,19 @@ export default function Tinypanel({title,description,logo}){
         }
     }
 
+    useEffect(() => {
+        const EscapeKey = (event) => {
+            if (event.key === 'Escape') {
+                if (modal) {
+                    toggleModal()
+                }
+            }
+        }
+        window.addEventListener('keydown', EscapeKey)
+        return () => {window.removeEventListener('keydown', EscapeKey)}
+
+    }, [modal]) 
+
     return(
         <div className="wrapper">
             <div className = "tiny-container">
@@ -42,7 +55,5 @@ export default function Tinypanel({title,description,logo}){
                 </div>
             )}
         </div>
-        
-             
     )
 }
