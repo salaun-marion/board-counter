@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Register from "./modal/Register";
 
-export default function Tinypanel({title,description,logo}){
+export default function Tinypanel({title,description,logo,email}){
     const[modal, setModal] = useState(false)
     const[count, setCount] = useState(0)
 
@@ -14,11 +14,16 @@ export default function Tinypanel({title,description,logo}){
     }
 
     const checkSubmission = () => {
-        if(count>0){
+        if(email.current){
             increment()
         }else{
             toggleModal()
         }
+    }
+
+    const getMail = (mail) => {
+        email.current=mail
+        increment()
     }
 
     useEffect(() => {
@@ -32,7 +37,8 @@ export default function Tinypanel({title,description,logo}){
         window.addEventListener('keydown', EscapeKey)
         return () => {window.removeEventListener('keydown', EscapeKey)}
 
-    }, [modal]) 
+    }) 
+        
 
     return(
         <div className="wrapper">
@@ -49,7 +55,7 @@ export default function Tinypanel({title,description,logo}){
                     <div className= "overlay" onClick={toggleModal}>
                     </div> 
                     <Register 
-                        onVote={increment}
+                        onVote={getMail}
                         onClose={toggleModal}
                     /> 
                 </div>

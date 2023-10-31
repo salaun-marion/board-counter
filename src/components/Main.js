@@ -1,8 +1,11 @@
 import Tinypanel from "./Tinypanel";
 import BackPanel from "./Backpanel";
 import {v4 as uuidv4} from 'uuid';
+import { useRef } from "react";
+
 
 export default function Main () {
+    const mail = useRef()
 
     const tinypanels=[
         {
@@ -128,6 +131,7 @@ export default function Main () {
                                     title={tinypanel.title}
                                     description={tinypanel.description}
                                     logo={tinypanel.pro_off_on}
+                                    email={mail}
                                 />
                             )
                         })

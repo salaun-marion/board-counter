@@ -1,11 +1,13 @@
+
+
 export default function Register({onVote, onClose}) {
 
     const handleClick = (e) => {
         e.preventDefault()
-        onVote()
+        onVote(e.target.email.value)
         onClose()
     }
-    
+
     return (
         <div className="register-panel">
             <span className="register-title">
@@ -32,7 +34,7 @@ export default function Register({onVote, onClose}) {
             </span>
             <form onSubmit={handleClick} >
                 <span className="form">
-                    <input type="email" id="email" placeholder="Email address" size="30" required />
+                    <input name="email" type="email" id="email" placeholder="Email address" size="30" required />
                     <input type="submit" className="upvote" value="Upvote" />
                 </span>
             </form>
