@@ -2,7 +2,7 @@ export default function Register({onVote, onClose}) {
 
     const handleClick = (e) => {
         e.preventDefault()
-        onVote(e.target.value)
+        onVote(e.target.email.value)
         onClose()
     }
 

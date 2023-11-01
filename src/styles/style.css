@@ -164,26 +164,21 @@
     color: white;
     text-align: center; 
     border-radius: 5px;
+    margin:-10;
 }
 
 .icon-chevron{
     background-color: #1F1F1F;
     visibility: hidden;
     border-radius: 5px;
-    position: relative;
-    top: 1px;
-    left:0px;
     transition: ease all 0.2s;
 }
-
 
 .counter{
     border-radius: 5px;
     background-color: #1F1F1F;
-    position: relative;
-    top: -4px;
-    left:0px;
     transition: ease all 0.2s;
+    margin-top: -6px;
 }
 
 .counter-box:hover{
@@ -319,9 +314,6 @@ body.active-modal {
     right: 0;
     bottom: 0;
     position: fixed;
-}
-
-.overlay {
     background: rgba(123, 125, 123, 0.20);
 }
 
@@ -331,7 +323,6 @@ body.active-modal {
         padding:1rem 0.5rem;
         transition: ease all 0.5s;
     }
-   
 }
 
 @media screen and (min-width: 800px) {

@@ -36,9 +36,7 @@ export default function Tinypanel({title,description,logo,email,counters}){
         }
         window.addEventListener('keydown', EscapeKey)
         return () => {window.removeEventListener('keydown', EscapeKey)}
-
     }) 
-        
 
     return(
         <div className="wrapper">
