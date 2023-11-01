@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Register from "./modal/Register";
 
-export default function Tinypanel({title,description,logo,email}){
+export default function Tinypanel({title,description,logo,email,counters}){
     const[modal, setModal] = useState(false)
     const[count, setCount] = useState(0)
 
@@ -44,7 +44,25 @@ export default function Tinypanel({title,description,logo,email}){
         <div className="wrapper">
             <div className = "tiny-container">
                 <span className="tiny-container-title">
-                    <button className="counter" type="button" id="counter" onClick={checkSubmission}> {count} </button>
+                    <button className="counter-box" type="button" id="counter" onClick={checkSubmission}> 
+                        <div className="counter-text">
+                            <div className="icon-chevron">
+                                <svg xmlns="http://www.w3.org/2000/svg" 
+                                    height="0.8em" 
+                                    viewBox="0 0 512 512"
+                                    style={{
+                                        backgroundColor: "#1F1F1F"
+                                    }}
+                                >
+                                    <path 
+                                        d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+                                        fill="white"    
+                                        />
+                                </svg>
+                            </div>
+                            <div className="counter">{count}</div>
+                        </div>
+                    </button>
                     <h5 className="tiny-title">{title}</h5>
                     <h4 className={`tiny-pro-${logo}`}>PRO</h4>
                 </span>

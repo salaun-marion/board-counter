@@ -3,7 +3,6 @@ import BackPanel from "./Backpanel";
 import {v4 as uuidv4} from 'uuid';
 import { useRef } from "react";
 
-
 export default function Main () {
     const mail = useRef()
 
