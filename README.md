@@ -1,5 +1,15 @@
 # Getting Started with Create React App
 
+## TL;DR
+
+Quick install :
+
+1.`npm install`
+2.`npm start`
+... and then normally "Here we go !"
+
+# Classic React `readME` file
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
